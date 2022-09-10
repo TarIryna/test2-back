@@ -1,0 +1,36 @@
+{
+  "name": "test2-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node ./bin/server.js",
+    "dev": "cross-env NODE_ENV=production nodemon ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TarIryna/test2-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TarIryna/test2-back/issues"
+  },
+  "homepage": "https://github.com/TarIryna/test2-back#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  }
+}
