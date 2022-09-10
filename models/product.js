@@ -3,7 +3,8 @@ const { Schema, model } = require('mongoose')
 const productSchema = new Schema(
   {
     model: {
-      type: String
+      type: String,
+      unique: true
     },
     subcategory: {
         type: Schema.Types.ObjectId,

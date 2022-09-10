@@ -1,15 +1,18 @@
+const getAllInfo = require('./getAllInfo')
 const addCategory = require('./addCategory')
 const addSubcategory = require('./addSubcategory')
-const getCategories = require('./getCategories')
-const getSubcategories = require('./getSubcategories')
+const addProduct = require('./addProduct')
 const deleteSubcategory = require('./deleteSubcategory')
+const deleteProduct = require('./deleteProduct')
 const deleteCategory = require('./deleteCategory')
+
 
 module.exports = {
     addCategory,
     addSubcategory,
-    getCategories,
-    getSubcategories,
+    addProduct,
+    getAllInfo,
     deleteSubcategory,
-    deleteCategory
+    deleteCategory,
+    deleteProduct
 }

@@ -4,18 +4,21 @@ const ctrlWrapper = require('../helpers/ctrlWrapper')
 const {
   addCategory,
   addSubcategory,
-  getCategories,
-  getSubcategories,
+  addProduct,
+  getAllInfo,
   deleteSubcategory,
-  deleteCategory
+  deleteCategory,
+  deleteProduct
 } = require('../controllers')
 
-router.get('/categories', ctrlWrapper(getCategories))
-router.get('/subcategories', ctrlWrapper(getSubcategories))
+
+router.get('/', ctrlWrapper(getAllInfo))
 router.post('/newcategory', ctrlWrapper(addCategory))
 router.post('/newsubcategory', ctrlWrapper(addSubcategory))
+router.post('/newproduct', ctrlWrapper(addProduct))
 router.delete('/delsubcat', ctrlWrapper(deleteSubcategory))
 router.delete('/delcat', ctrlWrapper(deleteCategory))
+router.delete('/delprod', ctrlWrapper(deleteProduct))
 
 
 module.exports = router
