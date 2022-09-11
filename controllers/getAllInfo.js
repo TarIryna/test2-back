@@ -1,4 +1,4 @@
-const {getCategories, getProducts, getSubcategories} = require('../services')
+const {getCategories, getProducts, getSubcategoryList} = require('../services')
 
 const getAllInfo = async (req, res) => {
     const products = await getProducts()

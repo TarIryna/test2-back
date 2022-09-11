@@ -6,13 +6,17 @@ const {
   addSubcategory,
   addProduct,
   getAllInfo,
+  getSubcategories,
+  getCategories,
   deleteSubcategory,
   deleteCategory,
   deleteProduct
 } = require('../controllers')
 
 
-router.get('/', ctrlWrapper(getAllInfo))
+router.get('/', ctrlWrapper(getCategories))
+router.get('/subcategories', ctrlWrapper(getSubcategories))
+// router.get('/categories', ctrlWrapper(getCategories))
 router.post('/newcategory', ctrlWrapper(addCategory))
 router.post('/newsubcategory', ctrlWrapper(addSubcategory))
 router.post('/newproduct', ctrlWrapper(addProduct))
