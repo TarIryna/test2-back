@@ -7,7 +7,7 @@ const getCategories = async (req, res) => {
     res.status(201).json({
         status: 'Ok',
         code: 201,
-        categories
+        data: categories
       });
 }
 
