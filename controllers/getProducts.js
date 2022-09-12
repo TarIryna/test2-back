@@ -9,6 +9,7 @@ const getProducts = async (req, res) => {
     const data = await fs.readFile(filePath)
     const result = JSON.parse(data);
     result.map(el => el.sub_categories.map(elem => products.push(elem.name)));
+    products.sort()
     res.status(201).json({
         status: 'Ok',
         code: 201,
