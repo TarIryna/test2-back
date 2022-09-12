@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose')
 
 const productSchema = new Schema(
   {
-    model: {
+    product: {
       type: String,
       unique: true
     },

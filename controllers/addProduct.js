@@ -10,7 +10,7 @@ const addProduct = async (req, res) => {
             data: 'No name of product or subcategory name'
           });
     }
-    const subcategoryObj = await Subategory.find({subcategory})
+    const subcategoryObj = await Subcategory.find({subcategory})
     const subcategoryId = subcategoryObj[0]._id
     const { _id: productId} = await Product.create({product, subcategoryId})
     res.status(201).json({
