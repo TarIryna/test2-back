@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung",
+    "sub_categories": [
+      {
+        "name": "Galaxy A32"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "iPhone",
+    "sub_categories": [
+      {
+        "name": "iPhone 12"
+      },
+      {
+        "name": "iPhone 13 Pro"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "TV",
+    "sub_categories": [
+      {
+        "name": "Nokia Smart TV 5000A"
+      },
+      {
+        "name": "Nokia Smart TV QLED 4300D"
+      },
+      {
+        "name": "Nokia Smart TV 4300B"
+      },
+      {
+        "name": "Philips 50PUS7506/12"
+      },
+      {
+        "name": "Philips 58PUS8506/12"
+      }
+    ]
+  }
+]
