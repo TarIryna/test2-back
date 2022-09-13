@@ -1,6 +1,6 @@
-const express = require('express')
-const router = express.Router()
-const ctrlWrapper = require('../helpers/ctrlWrapper')
+const express = require("express");
+const router = express.Router();
+const ctrlWrapper = require("../helpers/ctrlWrapper");
 const {
   addCategory,
   addSubcategory,
@@ -8,17 +8,15 @@ const {
   getProducts,
   getProductsDb,
   getSubcategories,
-  getCategories
-} = require('../controllers')
+  getCategories,
+} = require("../controllers");
 
+router.get("/", ctrlWrapper(getCategories));
+router.get("/subcategories", ctrlWrapper(getSubcategories));
+router.get("/products", ctrlWrapper(getProducts));
+router.get("/productsdb", ctrlWrapper(getProductsDb));
+router.post("/newcategory", ctrlWrapper(addCategory));
+router.post("/newsubcategory", ctrlWrapper(addSubcategory));
+router.post("/newproduct", ctrlWrapper(addProduct));
 
-router.get('/', ctrlWrapper(getCategories))
-router.get('/subcategories', ctrlWrapper(getSubcategories))
-router.get('/products', ctrlWrapper(getProducts))
-router.get('/productsdb', ctrlWrapper(getProductsDb))
-router.post('/newcategory', ctrlWrapper(addCategory))
-router.post('/newsubcategory', ctrlWrapper(addSubcategory))
-router.post('/newproduct', ctrlWrapper(addProduct))
-
-
-module.exports = router
+module.exports = router;

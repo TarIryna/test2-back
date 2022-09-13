@@ -1,14 +1,14 @@
-const {getSubcategoryList} = require('../services')
+const { getSubcategoryList } = require("../services");
 
 const getSubcategories = async (req, res) => {
-  const {category} = req.query
-  const subcategories = await getSubcategoryList(category)
-  subcategories.sort()
+  const { category } = req.query;
+  const subcategories = await getSubcategoryList(category);
+  subcategories.sort();
   res.status(201).json({
-    status: 'Ok',
+    status: "Ok",
     code: 201,
-    data: subcategories
+    data: subcategories,
   });
-}
+};
 
-  module.exports = getSubcategories
+module.exports = getSubcategories;
