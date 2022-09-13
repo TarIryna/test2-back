@@ -12,7 +12,8 @@ const addProduct = async (req, res) => {
     }
     const subcategoryObj = await Subcategory.find({subcategory})
     const subcategoryId = subcategoryObj[0]._id
-    const { _id: productId} = await Product.create({product, subcategoryId})
+    await Product.create({product, subcategoryId})
+    console.log("addProduct", product)
     res.status(201).json({
         status: 'Ok',
         code: 201,

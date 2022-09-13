@@ -6,7 +6,7 @@ const productSchema = new Schema(
       type: String,
       unique: true
     },
-    subcategory: {
+    subcategoryId: {
         type: Schema.Types.ObjectId,
         ref: "subcategory",
       },
